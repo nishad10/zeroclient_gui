@@ -1,5 +1,6 @@
 import * as React from 'react';
-import ReactTable from 'react-table';
+// @ts-ignore
+import ReactTable from 'react-table'
 import 'react-table/react-table.css'
 import { InfoPopup } from '../../Global/InfoPopup'
 import * as statics from "../../Global/statics"

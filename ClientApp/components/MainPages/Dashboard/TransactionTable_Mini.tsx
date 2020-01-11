@@ -1,6 +1,7 @@
 //import * as React from 'react';
 //import { RouteComponentProps } from 'react-router';
-//import ReactTable from 'react-table';
+//// @ts-ignore
+// import ReactTable from 'react-table'
 //import 'react-table/react-table.css'
 //import t from '../../Language/Language'
 //import { RowTx_Mini } from './TxRow_Mini'

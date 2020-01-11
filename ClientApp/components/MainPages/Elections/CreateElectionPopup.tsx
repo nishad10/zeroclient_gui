@@ -5,7 +5,8 @@ import { TrueFalseIcon } from '../../Global/TrueFalseIcon'
 import { UnixToDate } from '../../Global/UnixToDate'
 
 import { Election_lite, candidate_lite } from '../_Interfaces/Elections'
-import ReactTable from 'react-table';
+// @ts-ignore
+import ReactTable from 'react-table'
 import { Modal } from 'react-bootstrap'
 import { GetInputPopup } from '../../Global/GetInputPopup'
 import { InfoPopup } from '../../Global/InfoPopup'

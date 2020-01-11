@@ -5,7 +5,8 @@ import { TrueFalseIcon } from '../../Global/TrueFalseIcon'
 import { UnixToDate } from '../../Global/UnixToDate'
 import { Election, candidate, vote } from '../_Interfaces/Elections'
 import { User } from '../_Interfaces/iUser'
-import ReactTable from 'react-table';
+// @ts-ignore
+import ReactTable from 'react-table'
 import { Modal } from 'react-bootstrap'
 
 interface Props {

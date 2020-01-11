@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
-import ReactTable from 'react-table';
+// @ts-ignore
+import  ReactTable  from 'react-table';
 import 'react-table/react-table.css'
 import t from '../../Language/Language'
 import { UserInfoPopup } from './UserInfoPopup'
@@ -191,7 +192,7 @@ export class UserTable extends React.Component<Props, UserTableState> {
             <div className="inside-table-div table table-responsive">
 
                 {this.props.mobile ?
-                    < ReactTable
+                    <ReactTable
                         data={data}
                         columns={columns}
                         showPagination={false}

@@ -5,7 +5,8 @@ import { TrueFalseIcon } from '../../Global/TrueFalseIcon'
 import { UnixToDate } from '../../Global/UnixToDate'
 import { Election, blank_election, candidate } from '../_Interfaces/Elections'
 import { User, blank_user } from '../_Interfaces/iUser'
-import ReactTable from 'react-table';
+// @ts-ignore
+import ReactTable from 'react-table'
 import { Modal } from 'react-bootstrap'
 import { CastVoteConfirmation } from './CastVoteConfirmation'
 import { InfoPopup } from '../../Global/InfoPopup'

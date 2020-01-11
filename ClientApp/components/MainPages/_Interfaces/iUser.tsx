@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ECPair, networks } from 'bitcoinjs-lib'
+import { ECPair, networks } from 'radiumjs-lib'
 export interface User {
     username: string;
     description: string;

@@ -3,7 +3,8 @@
 //import t from '../Language/Language'
 //import { Modal } from 'react-bootstrap'
 //import { User } from '../MainPages/_Interfaces/iUser'
-//import ReactTable from 'react-table';
+//// @ts-ignore
+//import ReactTable from 'react-table'
 //import * as statics from './statics'
 //import * as settings from './settings'
 //interface Props {
