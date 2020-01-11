@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const bundleOutputDir = './wwwroot/dist';
 const UglifyEsPlugin = require('uglify-es-webpack-plugin');
@@ -18,7 +19,12 @@ module.exports = (env) => {
         module: {
             rules: [
                 { test: /\.tsx?$/, include: /ClientApp/, use: 'awesome-typescript-loader?silent=true' },
-                { test: /\.css$/, use: isDevBuild ? ['style-loader', 'css-loader'] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
+                { test: /\.css$/, use: isDevBuild ? ['style-loader', 'css-loader'] : [
+                            {
+                               loader: MiniCssExtractPlugin.loader,
+                             },
+                             "css-loader"
+                           ] },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
             ]
         },
@@ -38,7 +44,9 @@ module.exports = (env) => {
                 // Plugins that apply in production builds only
                 // new webpack.optimize.UglifyJsPlugin(),
                 new UglifyEsPlugin(),
-                new ExtractTextPlugin('site.css')
+                new MiniCssExtractPlugin({
+                           filename: `site.css`
+                       }),
             ])
     }];
 };
