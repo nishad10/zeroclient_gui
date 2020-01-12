@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "clean":"sudo rm -fr obj bin wwwroot/",
+    "clean": "sudo rm -fr obj bin wwwroot/",
     "start": "sudo npm run clean && sudo dotnet run"
   },
   "devDependencies": {
