@@ -3,8 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "clean": "sudo rm -fr obj bin wwwroot/",
-    "start": "sudo npm run clean && sudo dotnet run"
+    "clean": "rm -fr dist",
+    "bundle": "npm run clean && webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "npm run clean && webpack --mode production"
   },
   "devDependencies": {
     "@types/history": "4.7.3",
