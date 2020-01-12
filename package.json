@@ -2,7 +2,10 @@
   "name": "SmartChain.Web",
   "private": true,
   "version": "0.0.0",
-  "scripts": {"clean":"sudo rm -fr obj bin wwwroot/"},
+  "scripts": {
+    "clean":"sudo rm -fr obj bin wwwroot/",
+    "start": "sudo npm run clean && sudo dotnet run"
+  },
   "devDependencies": {
     "@types/history": "4.7.3",
     "@types/react": "^16.9.17",
