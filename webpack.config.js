@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const bundleOutputDir = './wwwroot/dist'
 module.exports = () => {
   return [
     {
@@ -12,8 +11,9 @@ module.exports = () => {
       entry: { main: './ClientApp/boot.tsx' },
       resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
       output: {
-        path: path.join(__dirname, '/dist'),
-        filename: 'bundle.min.js'
+        path: path.join(__dirname, 'dist'),
+        filename: 'bundle.min.js',
+        publicPath: '/'
       },
       module: {
         rules: [
